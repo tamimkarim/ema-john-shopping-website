@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
@@ -14,11 +13,17 @@ import NotFound from './components/NotFound/NotFound';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Login from './components/Login/Login';
 import Shipment from './components/Shipment/Shipment';
+import { createContext } from 'react';
+import { useState } from 'react';
+
+export const UserContext = createContext();
 
 function App() {
-
+   const [loggeddInuser, setLoggeddInuser] = useState({});
+   
   return (
-    <div>
+    <UserContext.Provider value={[loggeddInuser, setLoggeddInuser]}>
+      <h3> Email : {loggeddInuser.email} </h3>
       <Header></Header>
       <Router>
         <Switch>
@@ -53,7 +58,7 @@ function App() {
 
       </Router>
      
-    </div>
+    </UserContext.Provider>
   );
 }
 
