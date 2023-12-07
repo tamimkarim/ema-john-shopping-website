@@ -6,6 +6,7 @@ var shippingCost = [
         isSelected:false
     },
     {
+        
         price: 3.99,
         days: '5-7',
         type: 'Regular',
@@ -18,5 +19,6 @@ var shippingCost = [
         isSelected:false
     }
 ];
+
 
 export default shippingCost;

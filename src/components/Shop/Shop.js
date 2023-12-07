@@ -8,6 +8,7 @@ import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseMana
 import { Link } from 'react-router-dom';
 
 const Shop = () => {
+    
     const first10 = fakeData.slice(0,10);
     const [products, setProducts] = useState(first10);
     const [cart, setCart] = useState([]);

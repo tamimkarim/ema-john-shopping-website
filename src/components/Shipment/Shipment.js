@@ -5,6 +5,7 @@ import { UserContext } from '../../App';
 import './Shipment.css';
 
 const Shipment = () => {
+    
     const { register, handleSubmit, watch, errors } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const onSubmit = data => {    

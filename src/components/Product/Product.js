@@ -10,6 +10,7 @@ const Product = (props) => {
 
     return (
         <div className="product">
+            
             <div>
                 <img src={props.product.img} alt="" />
 
@@ -32,5 +33,6 @@ const Product = (props) => {
         </div>
     );
 };
+
 
 export default Product;

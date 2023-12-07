@@ -1,4 +1,5 @@
 const firebaseConfig = {
+  
     apiKey: "AIzaSyBsMHup_YAtEPRZfkJHCYtcyNxaMhDmUeg",
     authDomain: "ema-john-simple-eacf8.firebaseapp.com",
     databaseURL: "https://ema-john-simple-eacf8.firebaseio.com",

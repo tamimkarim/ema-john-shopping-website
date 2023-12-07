@@ -1,4 +1,4 @@
-const getUser = () => {
+const getUser = () =>  {
     const existingUser = sessionStorage.getItem('userId');
     if (existingUser) {
         return existingUser; 
@@ -10,7 +10,7 @@ const getUser = () => {
 }
 
 
-const getDataKey = () => {
+const getDataKey =  () => {
     const userId = getUser();
     return `emaJohn/carts/${userId}`
 }
@@ -23,12 +23,14 @@ const getDatabaseCart = () => {
 }
 
 const addToDatabaseCart = (key, count) => {
+
     const currentCart = getDatabaseCart();
     currentCart[key] = count;
     localStorage.setItem(getDataKey(), JSON.stringify(currentCart));
 }
 
 const removeFromDatabaseCart = key => {
+  
     const currentCart = getDatabaseCart();
     delete currentCart[key];
     localStorage.setItem(getDataKey(), JSON.stringify(currentCart));

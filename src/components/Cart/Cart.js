@@ -1,7 +1,9 @@
 import React from 'react';
 
 
+
 const Cart = (props) => {
+    
     const cart  = props.cart; 
     // console.log(cart);
     // const total = cart.reduce( (total, prd) => total + prd.price , 0)
@@ -32,8 +34,8 @@ const Cart = (props) => {
 
     return (
         <div>
-            <h4 className="text-danger">Order Summary</h4>
-            <p>Items Ordered: {cart.length} </p>
+            <h4 className ="text-danger">Order Summary</h4>
+            <p>Items Ordered:  {cart.length} </p>
             <p>Product Price: ${formatNumber(total)}</p>
             <p><small>Shipping Cost: ${shipping} </small></p>
             <p><small>Tax + Vat: ${tax} </small></p>
